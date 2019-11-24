@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEntryActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How are you feeling today?"
+            android:textSize="18sp"
+            tools:layout_conversion_absoluteX="0dp"
+            tools:layout_conversion_absoluteY="0dp"
+            tools:layout_conversion_absoluteWidth="216dp"
+            tools:layout_conversion_absoluteHeight="21dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/new_entry_text"
+            android:layout_width="380dp"
+            android:layout_height="126dp"
+            tools:layout_conversion_absoluteX="0dp"
+            tools:layout_conversion_absoluteY="21dp"
+            tools:layout_conversion_absoluteWidth="384dp"
+            tools:layout_conversion_absoluteHeight="42dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose from album"
+            android:onClick="choosefromalbum"
+            tools:layout_conversion_absoluteX="0dp"
+            tools:layout_conversion_absoluteY="64dp"
+            tools:layout_conversion_absoluteWidth="170dp"
+            tools:layout_conversion_absoluteHeight="48dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/button4" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take a photo"
+            android:onClick="takeaphoto"
+            tools:layout_conversion_absoluteX="0dp"
+            tools:layout_conversion_absoluteY="112dp"
+            tools:layout_conversion_absoluteWidth="122dp"
+            tools:layout_conversion_absoluteHeight="48dp"
+            app:layout_constraintLeft_toRightOf="@+id/button4"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <ImageView
+            android:id="@+id/new_entry_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button4"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_conversion_absoluteWidth="0dp"
+            tools:layout_conversion_absoluteX="0dp"
+            tools:layout_conversion_absoluteY="160dp" />
+
+
+        <ImageView
+            android:id="@+id/emoji1_down"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:onClick="EmojionClick"
+            android:src="@drawable/laugh_bw"
+            tools:layout_conversion_absoluteHeight="50dp"
+            tools:layout_conversion_absoluteWidth="50dp"
+            tools:layout_conversion_absoluteX="0dp"
+            tools:layout_conversion_absoluteY="160dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <ImageView
+            android:id="@+id/emoji1_up"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="EmojionClick"
+            android:src="@drawable/laugh_color"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_conversion_absoluteWidth="0dp"
+            tools:layout_conversion_absoluteX="0dp"
+            tools:layout_conversion_absoluteY="160dp" />
+
+        <ImageView
+            android:id="@+id/emoji2_down"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:src="@drawable/smile_bw"
+            android:onClick="EmojionClick"
+            tools:layout_conversion_absoluteX="50dp"
+            tools:layout_conversion_absoluteY="160dp"
+            tools:layout_conversion_absoluteWidth="50dp"
+            tools:layout_conversion_absoluteHeight="50dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintLeft_toRightOf="@+id/emoji1_down"
+            android:layout_marginLeft="16dp" />
+
+        <ImageView
+            android:id="@+id/emoji2_up"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="16dp"
+            android:onClick="EmojionClick"
+            android:src="@drawable/smile_color"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/emoji2_down"
+            app:layout_constraintLeft_toRightOf="@+id/emoji1_down"
+            app:layout_constraintRight_toRightOf="@+id/emoji2_down"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_conversion_absoluteWidth="0dp"
+            tools:layout_conversion_absoluteX="0dp"
+            tools:layout_conversion_absoluteY="160dp" />
+
+        <ImageView
+            android:id="@+id/emoji3_down"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:src="@drawable/sad_bw"
+            android:onClick="EmojionClick"
+            tools:layout_conversion_absoluteX="100dp"
+            tools:layout_conversion_absoluteY="160dp"
+            tools:layout_conversion_absoluteWidth="50dp"
+            tools:layout_conversion_absoluteHeight="50dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintLeft_toRightOf="@+id/emoji2_down"
+            android:layout_marginLeft="16dp" />
+
+        <ImageView
+            android:id="@+id/emoji3_up"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="16dp"
+            android:onClick="EmojionClick"
+            android:src="@drawable/sad_color"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/emoji3_down"
+            app:layout_constraintLeft_toRightOf="@+id/emoji2_down"
+            app:layout_constraintRight_toRightOf="@+id/emoji3_down"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_conversion_absoluteWidth="0dp"
+            tools:layout_conversion_absoluteX="0dp"
+            tools:layout_conversion_absoluteY="160dp" />
+
+        <ImageView
+            android:id="@+id/emoji4_down"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:src="@drawable/cry_bw"
+            android:onClick="EmojionClick"
+            tools:layout_conversion_absoluteX="150dp"
+            tools:layout_conversion_absoluteY="160dp"
+            tools:layout_conversion_absoluteWidth="50dp"
+            tools:layout_conversion_absoluteHeight="50dp"
+            app:layout_constraintLeft_toRightOf="@+id/emoji3_down"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <ImageView
+            android:id="@+id/emoji4_up"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="16dp"
+            android:onClick="EmojionClick"
+            android:src="@drawable/cry_color"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/emoji4_down"
+            app:layout_constraintLeft_toRightOf="@+id/emoji3_down"
+            app:layout_constraintRight_toRightOf="@+id/emoji4_down"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_conversion_absoluteWidth="0dp"
+            tools:layout_conversion_absoluteX="0dp"
+            tools:layout_conversion_absoluteY="160dp" />
+
+        <ImageView
+            android:id="@+id/emoji5_down"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:src="@drawable/angry_bw"
+            android:onClick="EmojionClick"
+            tools:layout_conversion_absoluteX="200dp"
+            tools:layout_conversion_absoluteY="160dp"
+            tools:layout_conversion_absoluteWidth="50dp"
+            tools:layout_conversion_absoluteHeight="50dp"
+            app:layout_constraintLeft_toRightOf="@+id/emoji4_down"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <ImageView
+            android:id="@+id/emoji5_up"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="16dp"
+            android:onClick="EmojionClick"
+            android:src="@drawable/angry_color"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/emoji5_down"
+            app:layout_constraintLeft_toRightOf="@+id/emoji4_down"
+            app:layout_constraintRight_toRightOf="@+id/emoji5_down"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_conversion_absoluteWidth="0dp"
+            tools:layout_conversion_absoluteX="0dp"
+            tools:layout_conversion_absoluteY="160dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:onClick="savetodatabase"
+            android:text="Save"
+            tools:layout_conversion_absoluteX="0dp"
+            tools:layout_conversion_absoluteY="210dp"
+            tools:layout_conversion_absoluteWidth="88dp"
+            tools:layout_conversion_absoluteHeight="48dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/shaking" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Add photo to entry"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_entry_text" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose emoji of overall mood"
+            android:textSize="18sp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/new_entry_photo" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Can't locate. Please check the setting."
+            android:textSize="18sp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/emoji5_up" />
+
+        <ImageView
+            android:id="@+id/shaking"
+            android:layout_width="81dp"
+            android:layout_height="87dp"
+            android:layout_marginLeft="16dp"
+            android:onClick="shakingonclick"
+            android:src="@drawable/shaking"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_conversion_absoluteWidth="0dp"
+            tools:layout_conversion_absoluteX="0dp"
+            tools:layout_conversion_absoluteY="160dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

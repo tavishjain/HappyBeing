@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emotions">
+        <item>Anxiety</item>
+        <item>Fear</item>
+        <item>Love</item>
+        <item>Optimism</item>
+        <item>Emptiness</item>
+        <item>Excitement</item>
+    </string-array>
+</resources>
